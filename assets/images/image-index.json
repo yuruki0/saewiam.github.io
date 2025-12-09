@@ -1,0 +1,16 @@
+{
+    "projects":[
+        {
+            "name": "makeda sketch 1",
+            "caption": "initial sketches of makeda's design",
+            "date": "2025-12-06",
+            "fileName": "makeda sketch1"
+        },
+        {
+            "name": "vien sketch 1",
+            "caption": "initial sketches of vien's design",
+            "date": "2025-12-06",
+            "fileName": "vien sketch1" 
+        }
+    ]
+}

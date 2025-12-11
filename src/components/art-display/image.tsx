@@ -5,6 +5,13 @@ interface ImageProps{
     caption: string;
 }
 
+export interface ImageDataType {
+    name: string,
+    caption: string,
+    date: string,
+    fileName: string
+}
+
 export default function Image(props: ImageProps){
     return (
         <div className={classes.image}>

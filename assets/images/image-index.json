@@ -4,13 +4,39 @@
             "name": "makeda sketch 1",
             "caption": "initial sketches of makeda's design",
             "date": "2025-12-06",
-            "fileName": "makeda sketch1"
+            "fileName": "makeda sketch1.png"
         },
         {
             "name": "vien sketch 1",
             "caption": "initial sketches of vien's design",
             "date": "2025-12-06",
-            "fileName": "vien sketch1" 
+            "fileName": "vien sketch1.png" 
+        }
+    ],
+    "illustrations":[
+        {
+            "name": "luna snow",
+            "caption": "luna snow dawing",
+            "date": "2025-12-10",
+            "fileName": "lunasnow.png"
+        },
+        {
+            "name": "daiwa vodka",
+            "caption": "uma dawing",
+            "date": "2025-12-10",
+            "fileName": "daiwa vodka.png"
+        },
+        {
+            "name": "pokemon za",
+            "caption": "pokemon za dawing",
+            "date": "2025-12-10",
+            "fileName": "pokemon za.png"
+        },
+        {
+            "name": "dmg amy",
+            "caption": "dmg amy dawing",
+            "date": "2025-12-10",
+            "fileName": "dmg amy.png"
         }
     ]
 }

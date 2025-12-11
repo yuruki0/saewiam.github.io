@@ -1,9 +1,8 @@
 import { createRoute } from '@tanstack/react-router'
 import { rootRoute } from './__root'
 
-
 function ProjectsPage() {
- return (    
+    return (    
         <>
             <h2>prawjects</h2>
         </>

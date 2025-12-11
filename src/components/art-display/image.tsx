@@ -3,7 +3,6 @@ import classes from './image.module.css'
 interface ImageProps{
     src: string;
     caption?: string;
-
 }
 
 export interface ImageDataType {
@@ -21,7 +20,7 @@ export default function Image(props: ImageProps){
                 props.caption ? <p>{props.caption}</p> : null
             }
         </div>
-        );
+    );
 }
 
 <Image src={'something.png'} caption={'a string of text'}/>

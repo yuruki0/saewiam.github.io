@@ -1,6 +1,8 @@
 import { createRoute } from '@tanstack/react-router'
 import { rootRoute } from './__root'
 
+import '../components/art-display/import_images'
+
 function IndexPage() {
   return (
     <>

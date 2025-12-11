@@ -1,9 +1,22 @@
-import type { PropsWithChildren } from "react";
+import type { ImageDataType } from "./image"
+import Image from "./image"
 
- export default function Column (props:PropsWithChildren){
+interface ColumnProps {
+    images: ImageDataType[],
+    captionsVisible: boolean
+}
+
+export function Column (props:ColumnProps){
     return(
         <div>
-            {props.children}
+            {
+                props.images.map((image) =>
+                    <Image 
+                        key={image.fileName} 
+                        src={image.fileName} 
+                        caption={props.captionsVisible ? image.caption : undefined} />
+                )
+            }
         </div>
     )
- }
+}

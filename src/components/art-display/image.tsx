@@ -2,7 +2,8 @@ import classes from './image.module.css'
 
 interface ImageProps{
     src: string;
-    caption: string;
+    caption?: string;
+
 }
 
 export interface ImageDataType {
@@ -16,7 +17,9 @@ export default function Image(props: ImageProps){
     return (
         <div className={classes.image}>
             <img src={props.src} alt={props.caption}/>
-            <p>{props.caption}</p>
+            {
+                props.caption ? <p>{props.caption}</p> : null
+            }
         </div>
         );
 }

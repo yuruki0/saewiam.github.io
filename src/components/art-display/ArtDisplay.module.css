@@ -1,9 +1,10 @@
 .art_display {
     display: flex;
     justify-content: space-between;
+    gap: 3vw;
     & > div {
         display: flex;
-        width: calc(50% - 1.5vw);
+        flex-grow: 1;
         flex-direction: column;
         gap: 3vw;
     }

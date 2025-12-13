@@ -38,5 +38,19 @@
             "date": "2025-12-10",
             "fileName": "dmg amy.png"
         }
+    ],
+    "life-drawing":[
+      {
+            "name": "gage 1",
+            "caption": "WI24 life drawing",
+            "date": "2025-12-12",
+            "fileName": "wi24 gage quick1.jpg"
+        },
+        {
+            "name": "gage 2",
+            "caption": "WI24 life drawing 2",
+            "date": "2025-12-12",
+            "fileName": "wi24 gage quick2.jpg"
+        }  
     ]
 }

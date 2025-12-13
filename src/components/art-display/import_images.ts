@@ -9,13 +9,21 @@ const pngUrls: {[key: string]: string} = import.meta.glob('./*.png', {
     eager: true
 })
 
+const jpgUrls: {[key:string]: string} = import.meta.glob('./*.jpg', {
+    base: '/assets/images',
+    import: 'default',
+    eager: true
+})
+
 interface ImageIndexType {
     [key: string]: ImageDataType[]
 }
 
+const urls = {...pngUrls, ...jpgUrls}
+
 Object.keys(imageIndex).forEach((category) => {
     imageIndex[category].forEach((image, index) => {
-        const imageUrl = pngUrls[`./${image.fileName}`];
+        const imageUrl = urls[`./${image.fileName}`];
         imageIndex[category][index].fileName = imageUrl
     })
 })

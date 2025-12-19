@@ -7,6 +7,7 @@ interface ArtDisplayProps {
     images: ImageDataType[],
     columns: number,
     captionsVisible: boolean
+    setOverlay?: (visible: boolean, src: string) => void
 }
 
 export function ArtDisplay (props: ArtDisplayProps) {
@@ -44,6 +45,7 @@ export function ArtDisplay (props: ArtDisplayProps) {
                     <Column
                         key={group[0].fileName}
                         images={group}
+                        setOverlay={props.setOverlay}
                         captionsVisible={props.captionsVisible} />
                 )
             }

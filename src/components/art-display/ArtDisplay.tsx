@@ -1,13 +1,14 @@
-import { Column } from "./Column";
+import { Column } from "./column";
 import type { ImageDataType } from "./image";
 
 import classes from './ArtDisplay.module.css'
+import { useState } from "react";
+import ImageOverlay from "./image-overlay";
 
 interface ArtDisplayProps {
     images: ImageDataType[],
     columns: number,
     captionsVisible: boolean
-    setOverlay?: (visible: boolean, src: string) => void
 }
 
 export function ArtDisplay (props: ArtDisplayProps) {
@@ -38,17 +39,31 @@ export function ArtDisplay (props: ArtDisplayProps) {
         //
         // This evenly distributes the images among the columns.
 
+    const [overlayVisible, setOverlayVisible] = useState(false)
+    const [overlaySrc, setOverlaySrc] = useState<string | null>(null)
+
+    const setOverlay = (visible: boolean, src: string | null) => {
+        setOverlayVisible(visible)
+        setOverlaySrc(src)
+    }
+    
     return (
+        <>
         <div className={classes.art_display}>
             {
                 artColumns.map((group) =>
-                    <Column
+                        <Column
                         key={group[0].fileName}
                         images={group}
-                        setOverlay={props.setOverlay}
+                        setOverlay={setOverlay}
                         captionsVisible={props.captionsVisible} />
                 )
             }
         </div>
+        <ImageOverlay 
+            src={overlaySrc} 
+            visible={overlayVisible}
+            update={setOverlay}/>
+        </>
     )
 }

@@ -8,10 +8,12 @@ export default function Header() {
           <Link to='/'>Marisa Cantor</Link>
         </h1>
         <nav className={classes.navigation}>
-          <Link to='/projects'>
-          projects
-          <Link to='/projects/second-project'>test</Link>
-          </Link>
+          <div className={classes.multi_item}>
+            <Link to='/projects'>
+              projects
+            </Link>
+            <Link to='/projects/second-project'>test</Link>
+          </div>
           
           <Link to='/illustration'>illustration</Link>
           <Link to='/life-drawing'>life drawing</Link>

@@ -1,4 +1,4 @@
-.header{
+.header {
     text-align: center;
     h1{
         margin: 30px auto;
@@ -7,7 +7,7 @@
     overflow: visible;
 }
 
-.navigation{
+.navigation {
     display: flex;
     max-width: 800px;
     margin: auto;
@@ -18,23 +18,32 @@
         flex-grow: 1;
         font-size: 1.5em;
         text-decoration: none;
-
-        position: relative;
-        overflow: visible;
-
-        /* drop down links */
-        & > * {
-            display: none;
-            position: absolute;
-            width: 100%;
-            padding-top: .3em;
-            color: gray;
-        }
-        &:hover > * {
-            display: block;
-        }
     }
-    :global(.active){
-        color: purple;
+}
+
+.multi_item {
+    display: inline;
+    overflow: visible;
+    position: relative;
+
+    a:not(:first-child) {
+        width: 100%;
+        display: none;
+        position: absolute;
+        padding-top: .3em;
+        color: gray;
     }
+    a:first-child {
+        display: block;
+        z-index: 10;
+        padding: top;
+        color: inherit;
+    }
+    &:hover a:not(:first-child) {
+        display: block;
+    }
+}
+
+:global(.active){
+    color: purple;
 }

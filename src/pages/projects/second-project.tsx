@@ -7,7 +7,11 @@ function SecondProjectPage() {
     return (    
         <>
             <h2>character design works for sonic contrast fan game</h2>
-            <ArtDisplay images = {imageIndex.secondProject} columns={1} captionsVisible={true}/>
+            <ArtDisplay
+                images = {imageIndex.secondProject}
+                columns={1}
+                captionsVisible={true}
+                compressLongImages={true} />
         </>
     )
 }

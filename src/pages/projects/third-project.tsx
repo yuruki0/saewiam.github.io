@@ -7,7 +7,11 @@ function ThirdProjectPage() {
     return (    
         <>
             <h2>spirit world</h2>
-            <ArtDisplay images = {imageIndex.thirdProject} columns={1} captionsVisible={false}/>
+            <ArtDisplay
+                images={imageIndex.thirdProject}
+                columns={1}
+                captionsVisible={false}
+                compressLongImages={true} />
         </>
     )
 }

@@ -18,6 +18,9 @@
         flex-grow: 1;
         font-size: 1.5em;
         text-decoration: none;
+        &:hover {
+            background-color: #eee;
+        }
     }
 }
 
@@ -26,12 +29,10 @@
     overflow: visible;
     position: relative;
 
-    a:not(:first-child) {
+    & > div {
         width: 100%;
         display: none;
         position: absolute;
-        padding-top: .3em;
-        color: gray;
     }
     a:first-child {
         display: block;
@@ -39,8 +40,12 @@
         padding: top;
         color: inherit;
     }
-    &:hover a:not(:first-child) {
+    &:hover > div {
         display: block;
+        & > a {
+            display: block;
+            color: darkgrey;
+        }
     }
 }
 

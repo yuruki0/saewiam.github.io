@@ -4,7 +4,8 @@ import Image from "./image"
 interface ColumnProps {
     images: ImageDataType[],
     captionsVisible: boolean
-    setOverlay?: (visible: boolean, src: string) => void
+    setOverlay?: (visible: boolean, src: string) => void,
+    compressLongImages?: boolean,
 }
 
 export function Column (props:ColumnProps){
@@ -16,7 +17,8 @@ export function Column (props:ColumnProps){
                         key={image.fileName} 
                         src={image.fileName} 
                         setOverlay={props.setOverlay}
-                        caption={props.captionsVisible ? image.caption : undefined} />
+                        caption={props.captionsVisible ? image.caption : undefined}
+                        compressLongImages={props.compressLongImages} />
                 )
             }
         </div>

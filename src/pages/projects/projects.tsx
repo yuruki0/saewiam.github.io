@@ -8,7 +8,11 @@ function ProjectsPage() {
     return (    
         <>
             <h2>prawjects</h2>
-            <ArtDisplay images = {imageIndex.projects} columns={1} captionsVisible={true}/>
+            <ArtDisplay
+                images={imageIndex.projects}
+                columns={1}
+                captionsVisible={true}
+                compressLongImages={true} />
         </>
     )
 }

@@ -12,8 +12,10 @@ export default function Header() {
             <Link to='/projects'>
               projects
             </Link>
-            <Link to='/projects/sonic-contrast-fangame'>sonic contrast</Link>
-            <Link to='/projects/spirit-world'>spirit world</Link>
+            <div>
+                <Link to='/projects/sonic-contrast-fangame'>sonic contrast</Link>
+                <Link to='/projects/spirit-world'>spirit world</Link>
+            </div>
           </div>
           
           <Link to='/illustration'>illustration</Link>

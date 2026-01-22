@@ -11,6 +11,7 @@ import { IllustrationRoute } from './pages/illustration.tsx'
 import { LifeDrawingRoute } from './pages/life-drawing.tsx'
 import { ProjectsIndexRoute, ProjectsRoute } from './pages/projects/projects.tsx'
 import { SecondProjectRoute } from './pages/projects/second-project.tsx'
+import { ThirdProjectRoute } from './pages/projects/third-project.tsx'
 
 const routeTree = rootRoute.addChildren([
   IndexRoute,
@@ -19,7 +20,8 @@ const routeTree = rootRoute.addChildren([
   LifeDrawingRoute,
   ProjectsRoute.addChildren([
     ProjectsIndexRoute,
-    SecondProjectRoute
+    SecondProjectRoute,
+    ThirdProjectRoute,
   ])
 ])
 

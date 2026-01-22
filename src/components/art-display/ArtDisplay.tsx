@@ -8,7 +8,8 @@ import ImageOverlay from "./image-overlay";
 interface ArtDisplayProps {
     images: ImageDataType[],
     columns: number,
-    captionsVisible: boolean
+    captionsVisible: boolean,
+    compressLongImages?: boolean,
 }
 
 export function ArtDisplay (props: ArtDisplayProps) {
@@ -56,7 +57,8 @@ export function ArtDisplay (props: ArtDisplayProps) {
                         key={group[0].fileName}
                         images={group}
                         setOverlay={setOverlay}
-                        captionsVisible={props.captionsVisible} />
+                        captionsVisible={props.captionsVisible}
+                        compressLongImages={props.compressLongImages} />
                 )
             }
         </div>

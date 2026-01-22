@@ -3,17 +3,17 @@ import { ArtDisplay } from '../../components/art-display/ArtDisplay';
 import { imageIndex } from '../../components/art-display/import_images';
 import { ProjectsRoute } from './projects';
 
-function SecondProjectPage() {
+function ThirdProjectPage() {
     return (    
         <>
-            <h2>character design works for sonic contrast fan game</h2>
-            <ArtDisplay images = {imageIndex.secondProject} columns={1} captionsVisible={true}/>
+            <h2>spirit world</h2>
+            <ArtDisplay images = {imageIndex.thirdProject} columns={1} captionsVisible={false}/>
         </>
     )
 }
 
-export const SecondProjectRoute = createRoute({
+export const ThirdProjectRoute = createRoute({
   getParentRoute: () => ProjectsRoute,
-  path: '/sonic-contrast-fangame',
-  component: SecondProjectPage, 
+  path: '/spirit-world',
+  component: ThirdProjectPage, 
 });
